@@ -14,7 +14,7 @@ http://localhost:3002/graphql
 nestjs + graphql
 https://docs.nestjs.com/graphql/quick-start
 
-公式のドキュメントだとgraphsql走らんし・・・(scheemaが必要らしい)
+公式のドキュメントだとgraphsql走らんし・・・(schemaが必要らしい)
 https://qiita.com/Gma_Gama/items/90b98e046e1b66a71c22
 
 ### ┗sls+nest
@@ -28,3 +28,9 @@ https://medium.com/swlh/run-nestjs-application-in-serverless-framework-on-aws-a9
 今回は採用してないけどnestjsをsamに乗せることも可能っぽい
 やってるrepo:
 https://github.com/rynop/abp-sam-nestjs
+
+## swagger
+
+http://localhost:3002/sample_api/
+
+https://qiita.com/odanado/items/60456ab3388f834dc9ca
