@@ -5,8 +5,23 @@
 
 ## build & start
 
-### playground
+### graphql
+
+nestjsでgraphqlを開発する方法としては
+* code first・・・model(typescript)でreq,resを定義する。
+* schema first・・・\*.graphqlファイルを先に作る
+
+の2つがある
+
 http://localhost:3002/graphql
+
+## code first
+
+まず*.model.tsを書く
+次にresolverを作ってそれをapp.moduleに適用させる。
+
+参考:
+https://kakkoyakakko2.hatenablog.com/entry/nestjs-graphql-code-first
 
 ## deploy
 
