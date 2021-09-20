@@ -10,7 +10,7 @@ export class AuthorResolver {
   ]);
 
   @Query(() => Author)
-  async author( @Args('id', { type: () => Int }) id: number) {
+  async author(@Args('id', { type: () => Int }) id: number): Promise<Author> {
     return this.AuthorMaps.get(id);
   }
 }
