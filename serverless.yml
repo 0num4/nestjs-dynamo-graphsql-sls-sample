@@ -1,0 +1,30 @@
+service: nestjs-sls-dynamo-lambda
+plugins:
+  - serverless-layers
+  - serverless-offline
+
+custom:
+  defaultStage: dev
+  profiles:
+    dev: default
+    prod: prod
+  serverless-layer:
+    layerDeployermentBucket: nestjs-sls-dynamo-lambda
+
+package:
+  individually: true
+  include:
+    - dist/**
+  exclude:
+    - '**'
+
+functions:
+  index:
+    handler: dist/handler.handler
+    events:
+      - http:
+          path: '/'
+          method: any
+      - http:
+          path: '{proxy+}'
+          method: any
