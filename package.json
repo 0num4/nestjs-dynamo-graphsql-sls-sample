@@ -31,7 +31,8 @@
     "reflect-metadata": "^0.1.13",
     "rimraf": "^3.0.2",
     "rxjs": "^7.2.0",
-    "swagger-ui-express": "^4.1.6"
+    "swagger-ui-express": "^4.1.6",
+    "aws-serverless-express": "^3.4.0"
   },
   "devDependencies": {
     "@nestjs/cli": "^8.0.0",
@@ -45,7 +46,6 @@
     "@typescript-eslint/eslint-plugin": "^4.28.2",
     "@typescript-eslint/parser": "^4.28.2",
     "aws-lambda": "^1.0.6",
-    "aws-serverless-express": "^3.4.0",
     "eslint": "^7.30.0",
     "eslint-config-prettier": "^8.3.0",
     "eslint-plugin-nestjs": "^1.2.3",
