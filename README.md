@@ -1,7 +1,9 @@
-# nestjs + sls(aws lambda) + graphql + dynamodb + cdk + reactサンプル
+# nestjs + sls(aws lambda) + swagger + graphql + dynamodb + cdk + reactサンプル
 
 * eslint固くした
 * graphql入れた
+* swagger入れた
+* slsが動くように
 
 ## build & start
 
@@ -90,3 +92,12 @@ http://localhost:3002/sample_api-json
 末尾にjsonつけるとjson吐き出してくれるのありがたい
 
 https://qiita.com/odanado/items/60456ab3388f834dc9ca
+
+# react
+
+create-react-appはglobalのnode versionに依存する
+
+```
+nodist global 14.17.1
+npx create-react-app create-react-sample --template typescript
+```
