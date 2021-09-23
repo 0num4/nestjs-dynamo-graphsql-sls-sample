@@ -94,10 +94,19 @@ http://localhost:3002/sample_api-json
 https://qiita.com/odanado/items/60456ab3388f834dc9ca
 
 # react
+上のディレクトリと誤字しやすいのでプロジェクトやっぱ分けたほうがいいね。
+あとnestの中にreact入れるのもあんまりよくないしreactの中にnest入れるのはそもそも出来ないし
+この3観点からrepoは分けたほうがいいと思う
 
 create-react-appはglobalのnode versionに依存する
 
 ```
 nodist global 14.17.1
 npx create-react-app create-react-sample --template typescript
+```
+
+```
+cd create-react-sample
+yarn build #ビルド
+yarn start # スタート
 ```
