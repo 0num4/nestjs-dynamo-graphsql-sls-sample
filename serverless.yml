@@ -8,8 +8,8 @@ custom:
   profiles:
     dev: default
     prod: prod
-  serverless-layer:
-    layerDeployermentBucket: nestjs-sls-dynamo-lambda
+  serverless-layers:
+    layersDeploymentBucket: nestjs-sls-dynamo-lambda-graphql
   # serverless-offline:
   #   httpPort: 3002
 
