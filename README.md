@@ -44,6 +44,37 @@ https://medium.com/swlh/run-nestjs-application-in-serverless-framework-on-aws-a9
 やってるrepo:
 https://github.com/rynop/abp-sam-nestjs
 
+### sls deploy
+
+なにこれ
+```
+npm install -g serverless ＃動く
+yarn global add serverless # 動かない
+choco install serverless -y #陥りがちな禁句
+```
+
+```
+  Error: Command failed: C:\ProgramData\chocolatey\lib\serverless\tools\serverless.exe --version
+  internal/modules/cjs/loader.js:1030
+    throw err;
+    ^
+
+  Error: Cannot find module 'C:\Users\setup\work\newKeirinkan\keirinkan-server\--version'
+      at Function.Module._resolveFilename (internal/modules/cjs/loader.js:1027:15)
+      at Function._resolveFilename (pkg/prelude/bootstrap.js:1459:46)
+      at Function.Module._load (internal/modules/cjs/loader.js:896:27)
+      at Function.runMain (pkg/prelude/bootstrap.js:1488:12)
+      at internal/main/run_main_module.js:17:47 {
+    code: 'MODULE_NOT_FOUND',
+    requireStack: []
+  }
+```
+
+デプロイコマンド
+```
+sls deploy --aws-profile prv-sls --stage dev
+```
+
 ## swagger
 
 http://localhost:3002/sample_api/

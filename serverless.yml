@@ -17,10 +17,10 @@ provider:
   name: aws
   runtime: nodejs14.x
   region: ap-northeast-1
-  # stage: ${opt.stage, 'dev'}
-  # profile: ${self:custom.profiles.${self:provider.stage}}
-  # environment:
-  #   SERVERLESS_STAGE: ${self:provider.stage}
+  stage: ${opt.stage, 'dev'}
+  profile: ${self:custom.profiles.${self:provider.stage}}
+  environment:
+    SERVERLESS_STAGE: ${self:provider.stage}
 
 package:
   individually: true
