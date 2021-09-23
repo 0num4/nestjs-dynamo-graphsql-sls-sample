@@ -53,6 +53,7 @@ yarn global add serverless # 動かない
 choco install serverless -y #陥りがちな禁句
 ```
 
+choco install serverlessするとどうなるか
 ```
   Error: Command failed: C:\ProgramData\chocolatey\lib\serverless\tools\serverless.exe --version
   internal/modules/cjs/loader.js:1030
@@ -70,13 +71,22 @@ choco install serverless -y #陥りがちな禁句
   }
 ```
 
-デプロイコマンド
+デプロイ
 ```
 sls deploy --aws-profile prv-sls --stage dev
+```
+
+
+offlineで動くか試す
+```
+sls offline
 ```
 
 ## swagger
 
 http://localhost:3002/sample_api/
+
+http://localhost:3002/sample_api-json
+末尾にjsonつけるとjson吐き出してくれるのありがたい
 
 https://qiita.com/odanado/items/60456ab3388f834dc9ca
