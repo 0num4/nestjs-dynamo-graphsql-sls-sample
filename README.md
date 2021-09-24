@@ -78,6 +78,12 @@ choco install serverlessするとどうなるか
 sls deploy --aws-profile prv-sls --stage dev
 ```
 
+deployしたとき500エラーが出る場合devDependencyに入っている可能性がある
+```
+    Why: I fixed this error when in package.json I moved everything from devDependencies to dependencies.
+    https://stackoverflow.com/a/52641534
+    Detail: Runtime.ImportModuleError: Error: Cannot find module 'aws-serverless-express'
+```
 
 offlineで動くか試す
 ```
@@ -142,3 +148,6 @@ aws s3 \
 ```
 aws s3 --profile xxxxx cp build s3://nestjs-sls-dynamo-lambda-frontend/ --recursive
 ```
+
+## デプロイ先
+http://nestjs-sls-dynamo-lambda-frontend.s3-website-ap-northeast-1.amazonaws.com/
