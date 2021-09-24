@@ -4,6 +4,8 @@
 * graphql入れた
 * swagger入れた
 * slsが動くように
+* reactが動くように
+
 
 ## build & start
 
