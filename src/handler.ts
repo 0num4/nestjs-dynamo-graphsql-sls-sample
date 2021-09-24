@@ -12,6 +12,9 @@ async function bootstrapServer(): Promise<Server> {
   const expressApp = express();
   const adapter = new ExpressAdapter(expressApp);
   const nestApp = await NestFactory.create(AppModule, adapter);
+  nestApp.enableCors({
+    origin: '*'
+  })
   await nestApp.init();
   return createServer(expressApp);
 }
