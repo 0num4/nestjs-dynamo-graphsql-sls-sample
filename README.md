@@ -1,7 +1,9 @@
-# nestjs + sls(aws lambda) + graphql + dynamodb + cdk + reactサンプル
+# nestjs + sls(aws lambda) + swagger + graphql + dynamodb + cdk + reactサンプル
 
 * eslint固くした
 * graphql入れた
+* swagger入れた
+* slsが動くように
 
 ## build & start
 
@@ -76,6 +78,12 @@ choco install serverlessするとどうなるか
 sls deploy --aws-profile prv-sls --stage dev
 ```
 
+deployしたとき500エラーが出る場合devDependencyに入っている可能性がある
+```
+    Why: I fixed this error when in package.json I moved everything from devDependencies to dependencies.
+    https://stackoverflow.com/a/52641534
+    Detail: Runtime.ImportModuleError: Error: Cannot find module 'aws-serverless-express'
+```
 
 offlineで動くか試す
 ```
@@ -90,3 +98,56 @@ http://localhost:3002/sample_api-json
 末尾にjsonつけるとjson吐き出してくれるのありがたい
 
 https://qiita.com/odanado/items/60456ab3388f834dc9ca
+
+## react
+上のディレクトリと誤字しやすいのでプロジェクトやっぱ分けたほうがいいね。
+あとnestの中にreact入れるのもあんまりよくないしreactの中にnest入れるのはそもそも出来ないし
+この3観点からrepoは分けたほうがいいと思う
+
+create-react-appはglobalのnode versionに依存する
+
+```
+nodist global 14.17.1
+npx create-react-app create-react-sample --template typescript
+```
+
+```
+cd create-react-sample
+yarn build #ビルド
+yarn start # スタート
+```
+
+## deploy
+
+```
+aws s3 mb s3://nestjs-sls-dynamo-lambda-frontend --profile prv-sls
+```
+
+### ビルド
+
+```
+yarn build
+```
+
+`build/` 以下に出力される。
+
+### S3 へのアップロード
+
+要 aws-cli
+
+まずはアップロード先バケットの中身を削除する。
+
+```
+aws s3 \
+  --profile [profile] \
+  rm s3://[bucket-name]/ --recursive
+```
+
+そして、 `build/` 以下をバケットにアップロードする。
+
+```
+aws s3 --profile xxxxx cp build s3://nestjs-sls-dynamo-lambda-frontend/ --recursive
+```
+
+## デプロイ先
+http://nestjs-sls-dynamo-lambda-frontend.s3-website-ap-northeast-1.amazonaws.com/
