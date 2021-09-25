@@ -19,10 +19,12 @@ jobs:
     steps:
     - uses: actions/checkout@v2
     - uses: actions/setup-node@v2
+      id: yarn-cache # use this to check for `cache-hit` (`steps.yarn-cache.outputs.cache-hit != 'true'`)
       with:
         node-version: '14'
         cache: yarn
     - name: Install dependencies
+      if: steps.yarn-cache.outputs.cache-hit != 'true'
       run: yarn --prefer-offline #公式がキャッシュするから変なオプションはいらない？
     - run: yarn build
     - run: yarn test
