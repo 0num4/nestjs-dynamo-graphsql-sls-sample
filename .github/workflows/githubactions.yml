@@ -26,6 +26,6 @@ jobs:
     - name: Install dependencies
       if: steps.yarn-cache.outputs.cache-hit != 'true'
       run: yarn #公式がキャッシュするから変なオプションはいらない？
-    - run: eslint \"{src,apps,libs,test}/**/*.ts\" --max-warnings=0
+    - run: npx eslint \"{src,apps,libs,test}/**/*.ts\" --max-warnings=0
     - run: yarn build
     - run: yarn test
