@@ -10,7 +10,8 @@ export class AuthorResolver {
   ]);
 
   @Query(() => Author)
-  async author( @Args('id', { type: () => Int }) id: number) {
+  // eslint-disable-next-line
+  async author(@Args('id', { type: () => Int }) id: number) {
     return this.AuthorMaps.get(id);
   }
 }
