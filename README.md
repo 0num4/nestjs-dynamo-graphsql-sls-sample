@@ -4,6 +4,8 @@
 * graphql入れた
 * swagger入れた
 * slsが動くように
+* reactが動くように
+
 
 ## build & start
 
@@ -87,7 +89,7 @@ deployしたとき500エラーが出る場合devDependencyに入っている可�
 
 offlineで動くか試す
 ```
-sls offline
+sls offline --stage dev
 ```
 
 ## swagger
@@ -151,3 +153,15 @@ aws s3 --profile xxxxx cp build s3://nestjs-sls-dynamo-lambda-frontend/ --recurs
 
 ## デプロイ先
 http://nestjs-sls-dynamo-lambda-frontend.s3-website-ap-northeast-1.amazonaws.com/
+
+# CDK
+
+s3+cfパターンの構築にはこれが使えそう。
+もちろんs3+cfを生cdkで書いてもいいけど
+
+https://www.npmjs.com/package/cdk-spa-deploy
+
+### corsの設定
+
+serverless.ymlとかapi gatewayとかcfとかs3の設定ではなく、nestでできる。
+`app.enableCors`
