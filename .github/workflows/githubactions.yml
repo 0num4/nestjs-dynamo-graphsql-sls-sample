@@ -6,29 +6,29 @@ name: Node.js CI
 on: push
 
 jobs:
-  nestjs:
+  # nestjs:
 
-    runs-on: ubuntu-latest
+  #   runs-on: ubuntu-latest
 
-    strategy:
-      matrix:
-        # node-version: [10.x, 12.x, 14.x, 15.x, 16.x]
-          node-version: [14.x]
-        # See supported Node.js release schedule at https://nodejs.org/en/about/releases/
+  #   strategy:
+  #     matrix:
+  #       # node-version: [10.x, 12.x, 14.x, 15.x, 16.x]
+  #         node-version: [14.x]
+  #       # See supported Node.js release schedule at https://nodejs.org/en/about/releases/
 
-    steps:
-    - uses: actions/checkout@v2
-    - uses: actions/setup-node@v2
-      id: yarn-cache # use this to check for `cache-hit` (`steps.yarn-cache.outputs.cache-hit != 'true'`)
-      with:
-        node-version: '14'
-        cache: yarn
-    - name: Install dependencies
-      if: steps.yarn-cache.outputs.cache-hit != 'true'
-      run: yarn #公式がキャッシュするから変なオプションはいらない？
-    # - run: yarn lint:check
-    - run: yarn build
-    - run: yarn test
+  #   steps:
+  #   - uses: actions/checkout@v2
+  #   - uses: actions/setup-node@v2
+  #     id: yarn-cache # use this to check for `cache-hit` (`steps.yarn-cache.outputs.cache-hit != 'true'`)
+  #     with:
+  #       node-version: '14'
+  #       cache: yarn
+  #   - name: Install dependencies
+  #     if: steps.yarn-cache.outputs.cache-hit != 'true'
+  #     run: yarn #公式がキャッシュするから変なオプションはいらない？
+  #   # - run: yarn lint:check
+  #   - run: yarn build
+  #   - run: yarn test
 
   react:
 
