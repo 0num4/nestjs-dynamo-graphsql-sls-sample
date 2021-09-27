@@ -171,6 +171,13 @@ https://www.npmjs.com/package/cdk-spa-deploy
 serverless.ymlとかapi gatewayとかcfとかs3の設定ではなく、nestでできる。
 `app.enableCors`
 
+### github actions
+
+jobは2つ以上追加出来ない。
+jobの中のセクション(nestjsやreact)などで区切る。
+
+cdはuses: actions/checkout@v2の後である必要がある(checkoutしないとそもそもsourceがない。)
+
 
 ### crlf絶対許さないマン
 

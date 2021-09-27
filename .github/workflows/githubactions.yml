@@ -51,6 +51,6 @@ jobs:
     - name: Install dependencies
       if: steps.yarn-cache.outputs.cache-hit != 'true'
       run: yarn #公式がキャッシュするから変なオプションはいらない？
-    # - run: yarn lint:check
+    - run: yarn lint:check
     - run: yarn build
     - run: yarn test
