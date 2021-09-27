@@ -13,8 +13,8 @@ const Helloworld =({ message }: AppProps) => {
         }
         getHelloData()
     }, [])
-    return <div>
+    return <>
        AAA {posts} AAA      
-    </div>
+    </>
 }
 export default Helloworld;
