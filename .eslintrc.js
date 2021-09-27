@@ -15,7 +15,7 @@ module.exports = {
     node: true,
     jest: true,
   },
-  ignorePatterns: ['.eslintrc.js','*.spec.ts','create-react-app/*'],
+  ignorePatterns: ['.eslintrc.js','*.spec.ts','create-react-sample/*'],
   rules: {
     '@typescript-eslint/interface-name-prefix': 'off',
     '@typescript-eslint/explicit-function-return-type': 'error',
