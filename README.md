@@ -170,3 +170,38 @@ https://www.npmjs.com/package/cdk-spa-deploy
 
 serverless.ymlとかapi gatewayとかcfとかs3の設定ではなく、nestでできる。
 `app.enableCors`
+
+
+### crlf絶対許さないマン
+
+vscodeが赤線出しまくるのでcrlfは許さないということにしてすべてlfで統一するようにした
+* vscodeの設定(下記の設定を保存するとプロジェクトのフォルダーに.vscode/setting.jsonが作られる)
+![image](https://user-images.githubusercontent.com/49909750/134957546-657aab0b-6309-4c43-a820-37a6120cc86a.png)
+
+* gitの設定
+```
+  git config core.autocrlf input
+  git config --local core.autocrlf input
+  git config --global core.autocrlf input
+  git config --system core.autocrlf input
+```
+
+* editorconfig
+
+```
+# 改行コード指定: LF
+end_of_line = lf
+```
+
+* prettier
+eslint fixするときに有効になる？はず
+
+```
+{
+  "singleQuote": true,
+  "endOfLine": "lf",
+  "trailingComma": "all"
+}
+```
+
+eslintの設定もどこかにありそう
