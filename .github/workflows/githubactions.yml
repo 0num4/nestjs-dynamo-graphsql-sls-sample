@@ -6,7 +6,7 @@ name: Node.js CI
 on: push
 
 jobs:
-  build:
+  nestjs:
 
     runs-on: ubuntu-latest
 
@@ -30,9 +30,7 @@ jobs:
     - run: yarn build
     - run: yarn test
 
-
-jobs:
-  backend:
+  react:
 
     runs-on: ubuntu-latest
 
