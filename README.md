@@ -8,6 +8,7 @@
 * slsが動くように
 * reactが動くように
 * reactとbackendが通信出来るようにした
+* CIでbuildとlintとtestのチェックするように(backendもfrontも)
 
 
 ## build & start
