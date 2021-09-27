@@ -5,6 +5,7 @@
 * swagger入れた
 * slsが動くように
 * reactが動くように
+* reactとbackendが通信出来るようにした
 
 
 ## build & start
@@ -26,8 +27,6 @@ http://localhost:3002/graphql
 
 参考:
 https://kakkoyakakko2.hatenablog.com/entry/nestjs-graphql-code-first
-
-## deploy
 
 ## 参考
 nestjs + graphql
@@ -118,6 +117,10 @@ cd create-react-sample
 yarn build #ビルド
 yarn start # スタート
 ```
+
+frontとbackendの通信はaxiosを使っている。
+
+取得した文字列などはuseEffectを使ってコンポーネント内でアップデートして表示する。
 
 ## deploy
 
