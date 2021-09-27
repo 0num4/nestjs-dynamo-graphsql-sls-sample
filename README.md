@@ -1,6 +1,6 @@
 # nestjs + sls(aws lambda) + swagger + graphql + dynamodb + cdk + reactサンプル
 
-[![CI](https://github.com/0num4/nestjs-dynamo-graphsql-sls-sample/actions/workflows/githubactions.yml/badge.svg)](https://github.com/0num4/nestjs-dynamo-graphsql-sls-sample/actions/workflows/githubactions.yml)
+[![CI](https://github.com/0num4/nestjs-dynamo-graphsql-sls-sample/actions/workflows/githubactions.yml/badge.svg?branch=master)](https://github.com/0num4/nestjs-dynamo-graphsql-sls-sample/actions/workflows/githubactions.yml)
 
 * eslint固くした
 * graphql入れた
