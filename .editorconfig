@@ -1,0 +1,15 @@
+# .editorconfigが設置されている階層以下にルールを適用
+root = true
+
+# すべてのファイルに適用
+[*]
+# 改行コード指定: LF
+end_of_line = lf
+# 行末スペースを削除: 有
+trim_trailing_whitespace = true
+# # ファイル末尾の改行: 有
+# insert_final_newline = true
+# インデントスタイル: space
+indent_style = space
+# インデント幅: 2
+indent_size = 2
