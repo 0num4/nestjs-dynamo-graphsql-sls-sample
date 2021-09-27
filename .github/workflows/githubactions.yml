@@ -6,7 +6,7 @@ name: Node.js CI
 on: push
 
 jobs:
-  build:
+  nestjs:
 
     runs-on: ubuntu-latest
 
@@ -22,17 +22,15 @@ jobs:
       id: yarn-cache # use this to check for `cache-hit` (`steps.yarn-cache.outputs.cache-hit != 'true'`)
       with:
         node-version: '14'
-        cache: yarn
+        # cache: yarn
     - name: Install dependencies
       if: steps.yarn-cache.outputs.cache-hit != 'true'
       run: yarn #公式がキャッシュするから変なオプションはいらない？
-    - run: yarn lint:check
+    # - run: yarn lint:check
     - run: yarn build
     - run: yarn test
 
-
-jobs:
-  backend:
+  react:
 
     runs-on: ubuntu-latest
 
@@ -43,13 +41,13 @@ jobs:
         # See supported Node.js release schedule at https://nodejs.org/en/about/releases/
 
     steps:
-    - run: cd create-react-sample
     - uses: actions/checkout@v2
     - uses: actions/setup-node@v2
       id: yarn-cache # use this to check for `cache-hit` (`steps.yarn-cache.outputs.cache-hit != 'true'`)
       with:
         node-version: '14'
-        cache: yarn
+        # cache: yarn
+    - run: cd create-react-sample
     - name: Install dependencies
       if: steps.yarn-cache.outputs.cache-hit != 'true'
       run: yarn #公式がキャッシュするから変なオプションはいらない？
