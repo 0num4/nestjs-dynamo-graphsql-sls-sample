@@ -4,6 +4,7 @@ import { AppService } from './app.service';
 import { GraphQLModule } from '@nestjs/graphql';
 import { AuthorResolver } from './graphql.resolver';
 import { AuthModule } from './auth/auth.module';
+import { UsersModule } from './users/users.module';
 
 @Module({
   // forRootの引数はapolloに渡される
@@ -18,6 +19,7 @@ import { AuthModule } from './auth/auth.module';
       playground: true,
     }),
     AuthModule,
+    UsersModule,
   ],
   controllers: [AppController],
   providers: [AppService, AuthorResolver],

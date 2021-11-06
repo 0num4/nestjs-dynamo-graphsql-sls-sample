@@ -1221,6 +1221,11 @@
   resolved "https://registry.yarnpkg.com/@protobufjs/utf8/-/utf8-1.1.0.tgz#a777360b5b39a1a2e5106f8e858f2fd2d060c570"
   integrity sha1-p3c2C1s5oaLlEG+OhY8v0tBgxXA=
 
+"@shiftcoders/dynamo-easy@^7.1.0":
+  version "7.1.0"
+  resolved "https://registry.yarnpkg.com/@shiftcoders/dynamo-easy/-/dynamo-easy-7.1.0.tgz#aaf3775c3460177992d76f6b744dc45565b9cec7"
+  integrity sha512-Nyt+OdhfztuCt6fxctjSlVf5ELElJLOmDzlZJuqbgYbyvUMiIxi9Cs7vQ2XE5CJ0k5BPShdkXXKefgBCaB6kSA==
+
 "@sindresorhus/is@^0.14.0":
   version "0.14.0"
   resolved "https://registry.yarnpkg.com/@sindresorhus/is/-/is-0.14.0.tgz#9fb3a3cf3132328151f353de4632e01e52102bea"
@@ -2420,6 +2425,11 @@ base64-js@^1.0.2, base64-js@^1.3.1:
   version "1.5.1"
   resolved "https://registry.yarnpkg.com/base64-js/-/base64-js-1.5.1.tgz#1b1b440160a5bf7ad40b650f095963481903930a"
   integrity sha512-AKpaYlHn8t4SVbOHCy+b5+KKgvR4vrsD8vbvrbiQJps7fKDTkjkDry6ji0rUJjC0kzbNePLwzxq8iypo41qeWA==
+
+bcryptjs@^2.4.3:
+  version "2.4.3"
+  resolved "https://registry.yarnpkg.com/bcryptjs/-/bcryptjs-2.4.3.tgz#9ab5627b93e60621ff7cdac5da9733027df1d0cb"
+  integrity sha1-mrVie5PmBiH/fNrF2pczAn3x0Ms=
 
 binary-case@^1.0.0:
   version "1.1.4"
