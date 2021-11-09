@@ -1,0 +1,17 @@
+openapi: 3.0.0
+info:
+  title: test-api
+  description: ''
+  version: 0.1.0
+  contact: {}
+tags: []
+servers: []
+components: {}
+paths:
+  /:
+    get:
+      operationId: AppController_getHello
+      parameters: []
+      responses:
+        '200':
+          description: ''
