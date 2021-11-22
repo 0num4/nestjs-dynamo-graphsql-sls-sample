@@ -95,6 +95,7 @@ choco install serverlessするとどうなるか
 
 デプロイ
 ```
+nodist local 14.0.0
 sls deploy --aws-profile prv-sls --stage dev
 ```
 
