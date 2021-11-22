@@ -103,6 +103,15 @@ http://localhost:3002/sample_api-json
 
 https://qiita.com/odanado/items/60456ab3388f834dc9ca
 
+## swagger→openapi generator
+
+yamlだとapiTag周りでエラーが出るのでjsonを使うほうがいい
+
+1. backend の yarn start
+2. curl.exe http://localhost:3000/\_api-json -o swaggerprd.json
+3. npx openapi-generator-cli generate -g typescript-axios -i swaggerprd.json -o src/generated-api --skip-validate-spec
+
+
 ## react
 上のディレクトリと誤字しやすいのでプロジェクトやっぱ分けたほうがいいね。
 あとnestの中にreact入れるのもあんまりよくないしreactの中にnest入れるのはそもそも出来ないし

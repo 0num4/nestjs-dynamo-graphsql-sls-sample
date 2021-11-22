@@ -21,7 +21,9 @@ async function bootstrap(): Promise<void> {
     const options = new DocumentBuilder()
       .setTitle('test-api')
       .setDescription('')
+      .addServer('localhost:3002')
       .setVersion('0.1.0')
+      .addTag('test')
       .build();
     const document = SwaggerModule.createDocument(app, options);
     SwaggerModule.setup('_api', app, document);

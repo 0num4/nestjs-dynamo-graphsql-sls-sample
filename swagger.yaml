@@ -4,8 +4,11 @@ info:
   description: ''
   version: 0.1.0
   contact: {}
-tags: []
-servers: []
+tags:
+  - name: test
+    description: ''
+servers:
+  - url: localhost:3002
 components: {}
 paths:
   /:
@@ -15,3 +18,13 @@ paths:
       responses:
         '200':
           description: ''
+      tags: &ref_0
+        - test
+  /aaa:
+    post:
+      operationId: AppController_posttest
+      parameters: []
+      responses:
+        '201':
+          description: ''
+      tags: *ref_0
