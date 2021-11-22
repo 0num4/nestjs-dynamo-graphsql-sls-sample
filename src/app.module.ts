@@ -3,6 +3,7 @@ import { AppController } from './app.controller';
 import { AppService } from './app.service';
 import { GraphQLModule } from '@nestjs/graphql';
 import { AuthorResolver } from './graphql.resolver';
+import { NestGResourceTestModule } from './nest-g-resource-test/nest-g-resource-test.module';
 
 @Module({
   // forRootの引数はapolloに渡される
@@ -16,6 +17,7 @@ import { AuthorResolver } from './graphql.resolver';
       autoSchemaFile: true,
       playground: true,
     }),
+    NestGResourceTestModule,
   ],
   controllers: [AppController],
   providers: [AppService, AuthorResolver],

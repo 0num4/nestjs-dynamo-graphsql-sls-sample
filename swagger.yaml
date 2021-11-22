@@ -1,0 +1,30 @@
+openapi: 3.0.0
+info:
+  title: test-api
+  description: ''
+  version: 0.1.0
+  contact: {}
+tags:
+  - name: test
+    description: ''
+servers:
+  - url: localhost:3002
+components: {}
+paths:
+  /:
+    get:
+      operationId: AppController_getHello
+      parameters: []
+      responses:
+        '200':
+          description: ''
+      tags: &ref_0
+        - test
+  /aaa:
+    post:
+      operationId: AppController_posttest
+      parameters: []
+      responses:
+        '201':
+          description: ''
+      tags: *ref_0

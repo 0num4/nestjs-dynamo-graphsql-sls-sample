@@ -50,6 +50,22 @@ https://medium.com/swlh/run-nestjs-application-in-serverless-framework-on-aws-a9
 やってるrepo:
 https://github.com/rynop/abp-sam-nestjs
 
+### nest g resource
+
+rest apiとかgraphqlとかいろいろ選べるしgraphqlの中でもcode firstかschema firstか選べたりwebsocketとかも選べる
+```
+❯ nest g resource nest-g-resource-test
+? What transport layer do you use? (Use arrow keys)
+> REST API
+  GraphQL (code first)
+  GraphQL (schema first)
+  Microservice (non-HTTP)
+  WebSockets
+
+```
+
+ただ、型付けとかが甘くてlint激落ちする :-1:
+
 ### sls deploy
 
 なにこれ
@@ -79,6 +95,7 @@ choco install serverlessするとどうなるか
 
 デプロイ
 ```
+nodist local 14.0.0
 sls deploy --aws-profile prv-sls --stage dev
 ```
 
@@ -102,6 +119,15 @@ http://localhost:3002/sample_api-json
 末尾にjsonつけるとjson吐き出してくれるのありがたい
 
 https://qiita.com/odanado/items/60456ab3388f834dc9ca
+
+## swagger→openapi generator
+
+yamlだとapiTag周りでエラーが出るのでjsonを使うほうがいい
+
+1. backend の yarn start
+2. curl.exe http://localhost:3000/\_api-json -o swaggerprd.json
+3. npx openapi-generator-cli generate -g typescript-axios -i swaggerprd.json -o src/generated-api --skip-validate-spec
+
 
 ## react
 上のディレクトリと誤字しやすいのでプロジェクトやっぱ分けたほうがいいね。
@@ -213,3 +239,27 @@ eslint fixするときに有効になる？はず
 ```
 
 eslintの設定もどこかにありそう
+
+
+### create-react-sampleデザインについて
+下記はラフ
+
+コードとスケールの勉強をするアプリ
+
+* ログイン画面でユーザーがログインできる
+
+* 表示されているコードがなんのスケールか、なんの進行か問題を出す
+
+* pianoを引いてる動画やSynthesiaの動画を表示してなんのスケールか問題を出す
+
+* サビの曲を聴いてなんの進行か問題を出す
+
+* BPMを当てる
+
+```
+三和音ちゃんbot
+GAC
+このコードは何かな？
+```
+
+* 成績機能
