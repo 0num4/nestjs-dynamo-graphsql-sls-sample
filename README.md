@@ -50,6 +50,22 @@ https://medium.com/swlh/run-nestjs-application-in-serverless-framework-on-aws-a9
 やってるrepo:
 https://github.com/rynop/abp-sam-nestjs
 
+### nest g resource
+
+rest apiとかgraphqlとかいろいろ選べるしgraphqlの中でもcode firstかschema firstか選べたりwebsocketとかも選べる
+```
+❯ nest g resource nest-g-resource-test
+? What transport layer do you use? (Use arrow keys)
+> REST API
+  GraphQL (code first)
+  GraphQL (schema first)
+  Microservice (non-HTTP)
+  WebSockets
+
+```
+
+ただ、型付けとかが甘くてlint激落ちする :-1:
+
 ### sls deploy
 
 なにこれ
