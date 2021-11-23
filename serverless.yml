@@ -16,12 +16,10 @@ custom:
   serverless-layers:
     layersDeploymentBucket: nestjs-sls-dynamo-lambda-graphql
   customDomain:
-    domainName: 'backend-api.dev.levena.link'
+    domainName: ${self:custom.config.${self:provider.stage}.baseDomain}
     basePath: ''
     stage: ${self:provider.stage}
-    # createRoute53Record: true
-    # endpointType: 'regional'
-    # apiType: http
+    createRoute53Record: true
 
 provider:
   name: aws
