@@ -2,14 +2,23 @@ service: nestjs-sls-dynamo-lambda
 plugins:
   - serverless-layers
   - serverless-offline
+  - serverless-domain-manager
 
 custom:
+  config:
+    dev:
+      baseDomain: 'backend-api.dev.levena.link'
   defaultStage: dev
   profiles:
     dev: default
     prod: prod
   serverless-layers:
     layersDeploymentBucket: nestjs-sls-dynamo-lambda-graphql
+  customDomain:
+    domainName: 'backend-api.dev.levena.link'
+    basePath: ''
+    stage: ${self:provider.stage}
+    createRoute53Record: true
   # serverless-offline:
   #   httpPort: 3002
 
@@ -18,7 +27,7 @@ provider:
   runtime: nodejs14.x
   region: ap-northeast-1
   stage: ${opt.stage, 'dev'}
-  profile: ${self:custom.profiles.${self:provider.stage}}
+  profile: ${self:custom.profiles.dev}
   environment:
     SERVERLESS_STAGE: ${self:provider.stage}
 

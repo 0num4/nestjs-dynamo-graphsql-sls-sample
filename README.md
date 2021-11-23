@@ -202,7 +202,9 @@ https://dev.classmethod.jp/articles/cloudfront-s3-customdomain/#toc-3
 
 1. 証明書のリクエスト
 2. 証明書をroute53で検証
-3.
+3. yarn add -D serverless-domain-manager
+4. serverless.yamlを編集(commitを見ること、なぜかnestした変数が解決出来なくなったのでtodo)
+5. sls create_domain --aws-profile prv-sls --stage dev
 
 ### corsの設定
 
