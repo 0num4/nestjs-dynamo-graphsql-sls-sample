@@ -99,6 +99,11 @@ nodist local 14.0.0
 sls deploy --aws-profile prv-sls --stage dev
 ```
 
+debug
+```
+$Env:SLS_DEBUG='true'
+```
+
 deployしたとき500エラーが出る場合devDependencyに入っている可能性がある
 ```
     Why: I fixed this error when in package.json I moved everything from devDependencies to dependencies.
