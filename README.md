@@ -193,6 +193,17 @@ s3+cfパターンの構築にはこれが使えそう。
 
 https://www.npmjs.com/package/cdk-spa-deploy
 
+### frontのdomainについて
+
+https://dev.classmethod.jp/articles/cloudfront-s3-customdomain/#toc-3
+こんな感じで適当にドメイン取得してわりあてればいける
+
+### backendのdomainについて
+
+1. 証明書のリクエスト
+2. 証明書をroute53で検証
+3.
+
 ### corsの設定
 
 serverless.ymlとかapi gatewayとかcfとかs3の設定ではなく、nestでできる。
