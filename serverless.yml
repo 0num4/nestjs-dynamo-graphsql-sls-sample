@@ -27,7 +27,7 @@ provider:
   name: aws
   runtime: nodejs14.x
   region: ap-northeast-1
-  stage: 'dev'
+  stage: ${opt:stage, self:custom.defaultStage}
   profile: ${self:custom.profiles.${self:provider.stage}}
   environment:
     SERVERLESS_STAGE: ${self:provider.stage}
